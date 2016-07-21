@@ -153,7 +153,7 @@
             // 
             this.button_networkJoin.Enabled = false;
             this.button_networkJoin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_networkJoin.Location = new System.Drawing.Point(960, 160);
+            this.button_networkJoin.Location = new System.Drawing.Point(960, 10);
             this.button_networkJoin.Name = "button5";
             this.button_networkJoin.Size = new System.Drawing.Size(100, 40);
             this.button_networkJoin.TabIndex = 13;
@@ -180,6 +180,7 @@
             this.groupBox_receive.TabIndex = 8;
             this.groupBox_receive.TabStop = false;
             this.groupBox_receive.Text = "Receive";
+
             // 
             // textBox_receive
             // 
@@ -190,6 +191,7 @@
             this.textBox_receive.ReadOnly = true;
             this.textBox_receive.Size = new System.Drawing.Size(760, 460);
             this.textBox_receive.TabIndex = 0;
+
             // 
             // button_openPort
             // 

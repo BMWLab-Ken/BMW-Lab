@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
 
         private void DisplayText(byte[] buffer)
         {
-            textBox_receive.Clear();
+          //  textBox_receive.Clear();
             textBox_receive.Text += string.Format("{0}{1}", Encoding.ASCII.GetString(buffer), Environment.NewLine);
         }
         private void button1_Click(object sender, EventArgs e)          /*Send Signal Check*/
@@ -128,11 +128,11 @@ namespace WindowsFormsApplication1
 		{
 			try{
 				while(sending){
-					Thread.Sleep(50);
+					Thread.Sleep(10);
 					string txBuffer = textBox_send.Text;
 					if(txBuffer.Contains("\n")){
 						txBuffer = txBuffer.Remove(txBuffer.LastIndexOf("\n"));
-						Console.Write(txBuffer);
+						serialPort1.Write(txBuffer);
 						txBuffer = "";
 						textBox_send.Text = "";
 					}
