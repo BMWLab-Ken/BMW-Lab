@@ -1,0 +1,10 @@
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/WindowsFormsApplication1.Form1.resources
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/WindowsFormsApplication1.Properties.Resources.resources
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/bin/Debug/WindowsFormsApplication1.exe.config
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/bin/Debug/WindowsFormsApplication1.exe.mdb
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/bin/Debug/WindowsFormsApplication1.pdb
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/bin/Debug/WindowsFormsApplication1.exe
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/WindowsFormsApplication1.exe
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/WindowsFormsApplication1.exe.mdb
+/home/cynako/git/CynaCons/BMW-Lab-BLRM-GUI/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/WindowsFormsApplication1.pdb

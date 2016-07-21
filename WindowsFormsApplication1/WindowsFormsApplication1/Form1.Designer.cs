@@ -30,215 +30,88 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_signalCheck = new System.Windows.Forms.Button();
+            this.comboBox_port = new System.Windows.Forms.ComboBox();
+            this.comboBox_baudRate = new System.Windows.Forms.ComboBox();
+            this.progressBar_status = new System.Windows.Forms.ProgressBar();
+            this.groupBox_send = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button_sendData = new System.Windows.Forms.Button();
+            this.button_networkJoin = new System.Windows.Forms.Button();
+            this.textBox_send = new System.Windows.Forms.TextBox();
+            this.groupBox_receive = new System.Windows.Forms.GroupBox();
+            this.textBox_receive = new System.Windows.Forms.TextBox();
+            this.button_openPort = new System.Windows.Forms.Button();
+            this.button_closePort = new System.Windows.Forms.Button();
+            this.label_portName = new System.Windows.Forms.Label();
+            this.label_baudRate = new System.Windows.Forms.Label();
+            this.label_status = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_send.SuspendLayout();
+            this.groupBox_receive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // button_signalCheck
             // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(10, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Signal Check";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_signalCheck.Enabled = false;
+            this.button_signalCheck.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_signalCheck.Location = new System.Drawing.Point(960, 100);
+            this.button_signalCheck.Name = "button1";
+            this.button_signalCheck.Size = new System.Drawing.Size(100, 40);
+            this.button_signalCheck.TabIndex = 0;
+            this.button_signalCheck.Text = "Signal Check";
+            this.button_signalCheck.UseVisualStyleBackColor = true;
+            this.button_signalCheck.Click += new System.EventHandler(this.button1_Click);
+          
             // 
-            // bindingNavigator1
+            // comboBox_port
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1218, 25);
-            this.bindingNavigator1.TabIndex = 2;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.comboBox_port.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_port.FormattingEnabled = true;
+            this.comboBox_port.Location = new System.Drawing.Point(840, 90);
+            this.comboBox_port.Name = "comboBox1";
+            this.comboBox_port.Size = new System.Drawing.Size(100, 10);
+            this.comboBox_port.TabIndex = 4;
+			this.comboBox_port.Text = "Hello World!";
             // 
-            // bindingNavigatorAddNewItem
+            // comboBox_baudRate
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "加入新的";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(28, 22);
-            this.bindingNavigatorCountItem.Text = "/{0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目總數";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "刪除";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "移到最前面";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "移到上一個";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "位置";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "移到下一個";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "移到最後面";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1080, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 20);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBox_baudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_baudRate.FormattingEnabled = true;
+            this.comboBox_baudRate.Items.AddRange(new object[] {
             "9600",
             "115200"});
-            this.comboBox2.Location = new System.Drawing.Point(1080, 146);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(108, 20);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox_baudRate.Location = new System.Drawing.Point(840, 140);
+            this.comboBox_baudRate.Name = "comboBox2";
+            this.comboBox_baudRate.Size = new System.Drawing.Size(100, 10);
+            this.comboBox_baudRate.TabIndex = 5;
+            this.comboBox_baudRate.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // progressBar1
+            // progressBar_status
             // 
-            this.progressBar1.Location = new System.Drawing.Point(1080, 50);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(108, 23);
-            this.progressBar1.TabIndex = 6;
+			this.progressBar_status.Location = new System.Drawing.Point(840, 50);
+            this.progressBar_status.Name = "progressBar1";
+            this.progressBar_status.Size = new System.Drawing.Size(100, 10);
+            this.progressBar_status.TabIndex = 6;
             // 
-            // groupBox1
+            // groupBox_send
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 442);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Send";
+           // this.groupBox_send.Controls.Add(this.button_sendData);
+            //this.groupBox_send.Controls.Add(this.button_networkJoin);
+            this.groupBox_send.Controls.Add(this.textBox_send);
+            //this.groupBox_send.Controls.Add(this.button_signalCheck);
+            this.groupBox_send.Location = new System.Drawing.Point(20, 540);
+            this.groupBox_send.Name = "groupBox1";
+            this.groupBox_send.Size = new System.Drawing.Size(800, 100);
+            this.groupBox_send.TabIndex = 7;
+            this.groupBox_send.TabStop = false;
+            this.groupBox_send.Text = "Send";
             // 
             // radioButton1
             // 
@@ -264,117 +137,119 @@
             this.radioButton2.Text = "HEX";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // button_sendData
             // 
-            this.button6.Enabled = false;
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(225, 369);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(105, 52);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "Send Data";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button_sendData.Enabled = false;
+            this.button_sendData.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_sendData.Location = new System.Drawing.Point(960, 20);
+            this.button_sendData.Name = "button6";
+            this.button_sendData.Size = new System.Drawing.Size(100, 40);
+            this.button_sendData.TabIndex = 14;
+            this.button_sendData.Text = "Send Data";
+            this.button_sendData.UseVisualStyleBackColor = true;
+            this.button_sendData.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // button_networkJoin
             // 
-            this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(119, 369);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 52);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Network Join";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button_networkJoin.Enabled = false;
+            this.button_networkJoin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_networkJoin.Location = new System.Drawing.Point(960, 10);
+            this.button_networkJoin.Name = "button5";
+            this.button_networkJoin.Size = new System.Drawing.Size(100, 40);
+            this.button_networkJoin.TabIndex = 13;
+            this.button_networkJoin.Text = "Network Join";
+            this.button_networkJoin.UseVisualStyleBackColor = true;
+            this.button_networkJoin.Click += new System.EventHandler(this.button5_Click);
             // 
-            // textBox1
+            // textBox_send
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(10, 43);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 320);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+			this.textBox_send.Enabled = true;
+            this.textBox_send.Location = new System.Drawing.Point(20, 20);
+            this.textBox_send.Multiline = true;
+            this.textBox_send.Name = "textBox1";
+            this.textBox_send.Size = new System.Drawing.Size(760, 60);
+            this.textBox_send.TabIndex = 0;
+            this.textBox_send.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // groupBox2
+            // groupBox_receive
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(360, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(679, 458);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Recived";
+            this.groupBox_receive.Controls.Add(this.textBox_receive);
+            this.groupBox_receive.Location = new System.Drawing.Point(20, 20);
+            this.groupBox_receive.Name = "groupBox2";
+            this.groupBox_receive.Size = new System.Drawing.Size(800, 500);
+            this.groupBox_receive.TabIndex = 8;
+            this.groupBox_receive.TabStop = false;
+            this.groupBox_receive.Text = "Receive";
+
             // 
-            // textBox2
+            // textBox_receive
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(6, 16);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(659, 421);
-            this.textBox2.TabIndex = 0;
+            this.textBox_receive.Enabled = false;
+            this.textBox_receive.Location = new System.Drawing.Point(20, 20);
+            this.textBox_receive.Multiline = true;
+            this.textBox_receive.Name = "textBox2";
+            this.textBox_receive.ReadOnly = true;
+            this.textBox_receive.Size = new System.Drawing.Size(760, 460);
+            this.textBox_receive.TabIndex = 0;
+
             // 
-            // button3
+            // button_openPort
             // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1080, 172);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 51);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Open Port";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_openPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_openPort.Location = new System.Drawing.Point(840, 200);
+            this.button_openPort.Name = "button3";
+            this.button_openPort.Size = new System.Drawing.Size(90, 40);
+            this.button_openPort.TabIndex = 9;
+            this.button_openPort.Text = "Open Port";
+            this.button_openPort.UseVisualStyleBackColor = true;
+            this.button_openPort.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button_closePort
             // 
-            this.button4.Enabled = false;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1080, 229);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 51);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Close Port";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_closePort.Enabled = false;
+            this.button_closePort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_closePort.Location = new System.Drawing.Point(940, 200);
+            this.button_closePort.Name = "button4";
+            this.button_closePort.Size = new System.Drawing.Size(90, 40);
+            this.button_closePort.TabIndex = 2;
+            this.button_closePort.Text = "Close Port";
+            this.button_closePort.UseVisualStyleBackColor = true;
+            this.button_closePort.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label1
+            // label_portName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1093, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Port Name";
+            this.label_portName.AutoSize = true;
+            this.label_portName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_portName.Location = new System.Drawing.Point(840, 70);
+            this.label_portName.Name = "label1";
+            this.label_portName.Size = new System.Drawing.Size(50, 10);
+            this.label_portName.TabIndex = 10;
+            this.label_portName.Text = "Port Name";
             // 
-            // label2
+            // lable_baudRate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1093, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Baud Rate";
+            this.label_baudRate.AutoSize = true;
+            this.label_baudRate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_baudRate.Location = new System.Drawing.Point(840, 120);
+            this.label_baudRate.Name = "label2";
+            this.label_baudRate.Size = new System.Drawing.Size(100, 10);
+            this.label_baudRate.TabIndex = 11;
+            this.label_baudRate.Text = "Baud Rate";
             // 
-            // label3
+            // lable_status
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1104, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 19);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Status";
+            this.label_status.AutoSize = true;
+            this.label_status.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_status.Location = new System.Drawing.Point(840, 20);
+            this.label_status.Name = "label3";
+            this.label_status.Size = new System.Drawing.Size(50, 10);
+            this.label_status.TabIndex = 12;
+            this.label_status.Text = "Status";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1042, 407);
+            this.pictureBox1.Location = new System.Drawing.Point(840, 407);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -384,7 +259,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1042, 286);
+            this.pictureBox2.Location = new System.Drawing.Point(840, 286);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(176, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -395,7 +270,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1104, 385);
+            this.label4.Location = new System.Drawing.Point(840, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 19);
             this.label4.TabIndex = 15;
@@ -405,31 +280,27 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 482);
+            this.ClientSize = new System.Drawing.Size(1000, 482);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.label_status);
+            this.Controls.Add(this.label_baudRate);
+            this.Controls.Add(this.label_portName);
+            this.Controls.Add(this.button_closePort);
+            this.Controls.Add(this.button_openPort);
+            this.Controls.Add(this.groupBox_receive);
+            this.Controls.Add(this.groupBox_send);
+            this.Controls.Add(this.progressBar_status);
+            this.Controls.Add(this.comboBox_baudRate);
+            this.Controls.Add(this.comboBox_port);
             this.Name = "Form1";
             this.Text = "Blutech LoRa Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox_send.ResumeLayout(false);
+            this.groupBox_send.PerformLayout();
+            this.groupBox_receive.ResumeLayout(false);
+            this.groupBox_receive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -439,34 +310,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_signalCheck;
+        private System.Windows.Forms.ComboBox comboBox_port;
+        private System.Windows.Forms.ComboBox comboBox_baudRate;
+        private System.Windows.Forms.ProgressBar progressBar_status;
+        private System.Windows.Forms.GroupBox groupBox_send;
+        private System.Windows.Forms.TextBox textBox_send;
+        private System.Windows.Forms.GroupBox groupBox_receive;
+        private System.Windows.Forms.TextBox textBox_receive;
+        private System.Windows.Forms.Button button_openPort;
+        private System.Windows.Forms.Button button_closePort;
+        private System.Windows.Forms.Label label_portName;
+        private System.Windows.Forms.Label label_baudRate;
+        private System.Windows.Forms.Label label_status;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button_networkJoin;
+        private System.Windows.Forms.Button button_sendData;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
