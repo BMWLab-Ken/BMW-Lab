@@ -38,28 +38,35 @@ namespace WindowsFormsApplication1
         }
         delegate void Display(byte[] buffer);
         private Boolean receiving;
+        private Boolean Looptest; /*Test variable*/
+        private Boolean connect; /*Network variable*/
         private Thread t;
         private void DisplayText(byte[] buffer)
         {
-            byte[] signalcheck = { 0x01, 0x01, 0x01 };
-            byte[] networkjoin = { 0x02, 0x01, 0x01 };
-            byte[] datasend = { 0x03 };
-            textBox2.Text += "[" + DateTime.Now.ToString() + "]" + string.Format("{0}{1}", Encoding.ASCII.GetString(buffer), Environment.NewLine);
-            if (buffer == signalcheck)
+            byte[] join_success = { 0x02, 0x01, 0x01 };
+            byte[] join_timeout = { 0x02, 0x01, 0x03 };
+            if (buffer [0] == 0x01)
             {
-
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + "Received: " + string.Format("{0}{1}", bytesToHex(buffer), Environment.NewLine);
             }
-            else if (buffer == networkjoin)
+            else if (buffer.SequenceEqual(join_success))
             {
-
+                connect = true;
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + "Received: " + string.Format("{0}{1}", bytesToHex(buffer), Environment.NewLine);
             }
-            else if (buffer == datasend)
+            else if (buffer.SequenceEqual(join_timeout))
             {
-
+                connect = false;
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + "Received: " + string.Format("{0}{1}", bytesToHex(buffer), Environment.NewLine);
+            }
+            else if (buffer[0] == 0x03)
+            {
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + "Received: " + string.Format("{0}{1}", bytesToHex(buffer), Environment.NewLine);
             }
             else
             {
-
+                connect = false;
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + "Receive error" + Environment.NewLine;
             }
         }
         private void button1_Click(object sender, EventArgs e)          /*Send Signal Check*/
@@ -68,7 +75,6 @@ namespace WindowsFormsApplication1
             //serialPort1.WriteLine(textBox1.Text);
             serialPort1.Write(Commend,0,Commend.Length);
             textBox2.Text += "[" + DateTime.Now.ToString() + "]" + " Try signal check..." + Environment.NewLine;
-            textBox1.Text = "";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -109,7 +115,9 @@ namespace WindowsFormsApplication1
                     button4.Enabled = true;
                     button5.Enabled = true;
                     button6.Enabled = true;
+                    textBox2.Enabled = true;
                     textBox2.Clear();
+                    textBox2.WordWrap = true;
                 }
             }
             catch(UnauthorizedAccessException)
@@ -148,6 +156,8 @@ namespace WindowsFormsApplication1
                     {
                         Int32 length = serialPort1.Read(buffer, 0, buffer.Length);
                         Array.Resize(ref buffer, length);
+                        //DisplayText(buffer);
+                        Console.WriteLine("{0}", bytesToHex(buffer)); //check data on console
                         Display d = new Display(DisplayText);
                         this.Invoke(d, new Object[] { buffer });
                         Array.Resize(ref buffer, 1024);
@@ -168,7 +178,6 @@ namespace WindowsFormsApplication1
             //serialPort1.WriteLine(textBox1.Text);
             serialPort1.Write(Commend, 0, Commend.Length);
             textBox2.Text += "[" + DateTime.Now.ToString() + "]" + " Try network join..." + Environment.NewLine;
-            textBox1.Text = "";
         }
 
         private void button6_Click(object sender, EventArgs e)       /*Send Data*/
@@ -264,6 +273,36 @@ namespace WindowsFormsApplication1
             string hx = Convert.ToString(b, 16).ToUpper();
             if (hx.Length < 2) hx = "0" + hx;
             return hx;
+        }
+        private void button2_Click(object sender, EventArgs e)           /*Loop Test START*/
+        {
+            /*function array*/
+            byte[] signalcheck = { 0x01, 0x01, 0x01 };
+            byte[] networkjoin = { 0x02, 0x01, 0x01 };
+            byte[] senddata = { 0x03, 0x02, 0xAA, 0xBB };
+
+            /*join process*/
+            if (!connect)
+            {
+                serialPort1.Write(networkjoin, 0, networkjoin.Length);
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + " Try network join..." + Environment.NewLine;
+            }
+            /*if success, send data*/
+            else
+            {
+                serialPort1.Write(senddata, 0, senddata.Length);
+                textBox2.Text += "[" + DateTime.Now.ToString() + "]" + " Send data" + String.Format(" {0}{1}",bytesToHex(senddata), Environment.NewLine);
+            }        
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox2.Text += "[" + DateTime.Now.ToString() + "]" + " Stop Loop Test " + Environment.NewLine;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
